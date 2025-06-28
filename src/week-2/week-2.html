@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week-2 과제</title>
+    <link rel="stylesheet" href="week-2.css">
+    <script src="week-2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs-container">
+            <ul class="tab-list" role="tablist" aria-label="메인 탭 네비게이션">
+                <li role="presentation">
+                    <button class="tab-button" 
+                            role="tab" 
+                            aria-selected="true" 
+                            aria-controls="panel-overview" 
+                            id="tab-overview"
+                            tabindex="0">
+                        개요
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="panel-features" 
+                            id="tab-features"
+                            tabindex="-1">
+                        소개
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="panel-statistics" 
+                            id="tab-statistics"
+                            tabindex="-1">
+                        점수
+                    </button>
+                </li>
+                <li role="presentation">
+                    <button class="tab-button" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="panel-support" 
+                            id="tab-support"
+                            tabindex="-1">
+                        접근성
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-panels">
+                <div class="tab-panel" 
+                     role="tabpanel" 
+                     id="panel-overview" 
+                     aria-labelledby="tab-overview"
+                     aria-hidden="false"
+                     tabindex="0">
+                    <h3>개요</h3>
+                    <p>대충 개요 내용</p>
+                </div>
+
+                <div class="tab-panel" 
+                     role="tabpanel" 
+                     id="panel-features" 
+                     aria-labelledby="tab-features"
+                     aria-hidden="true"
+                     tabindex="0">
+                    <h3>소개</h3>
+                    <p>대충 소개 내용</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <h4>접근성 준수</h4>
+                            <p>ARIA 속성과 키보드 네비게이션 지원</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>반응형 디자인</h4>
+                            <p>모든 디바이스에서 최적화된 사용자 경험 제공</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>부드러운 애니메이션</h4>
+                            <p>모션 감소 설정을 고려한 우아한 전환 효과</p>
+                        </div>
+                        <div class="feature-card">
+                            <h4>모던 디자인</h4>
+                            <p>대충 익숙한 디자인</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" 
+                     role="tabpanel" 
+                     id="panel-statistics" 
+                     aria-labelledby="tab-statistics"
+                     aria-hidden="true"
+                     tabindex="0">
+                    <h3>점수</h3>
+                    <p>대충 점수</p>
+                    
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number">??</span>
+                            <span class="stat-label">접근성 점수</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">??</span>
+                            <span class="stat-label">성능 점수</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">??</span>
+                            <span class="stat-label">모바일 호환성</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">??</span>
+                            <span class="stat-label">사용자 만족도</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" 
+                     role="tabpanel" 
+                     id="panel-support" 
+                     aria-labelledby="tab-support"
+                     aria-hidden="true"
+                     tabindex="0">
+                    <h3>접근성</h3>
+                    <p>대충 접근성 내용</p>
+                    <p><strong>키보드 단축키 :</strong></p>
+                    <ul>
+                        <li><kbd>Tab</kbd> / <kbd>Shift + Tab</kbd>: 탭 버튼으로 포커스 이동</li>
+                        <li><kbd>←</kbd> / <kbd>→</kbd>: 탭 간 이동</li>
+                        <li><kbd>Home</kbd>: 첫 번째 탭으로 이동</li>
+                        <li><kbd>End</kbd>: 마지막 탭으로 이동</li>
+                        <li><kbd>Enter</kbd> / <kbd>Space</kbd>: 탭 활성화</li>
+                    </ul>
+                    <p><strong>브라우저 지원:</strong> Chrome, Firefox, Safari, Edge 최신 버전</p>
+                    <p><strong>접근성 도구:</strong> NVDA, JAWS, VoiceOver 등 모든 주요 스크린 리더 지원</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
