@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0d1117 0%, #21262d 100%);
+}
+
+.main-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+    z-index: 10;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #7c3aed, #2563eb);
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #7c3aed, #2563eb, #06b6d4);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #8b949e;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #238636;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2ea043;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+}
+
+.btn-secondary:hover {
+    background: #21262d;
+    border-color: #8b949e;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-item {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #7c3aed;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #8b949e;
+}
+
+.bg-element {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.bg-element-1 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #7c3aed, #2563eb);
+    top: 10%;
+    left: 10%;
+}
+
+.bg-element-2 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #06b6d4, #0891b2);
+    top: 20%;
+    right: 15%;
+}
+
+.bg-element-3 {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, #2563eb, #7c3aed);
+    bottom: 20%;
+    left: 20%;
+}
+
+.bg-element-4 {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(45deg, #0891b2, #06b6d4);
+    bottom: 15%;
+    right: 10%;
+}
+
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #7c3aed;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 200px;
+    }
+}
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #7c3aed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+
+.cursor-trail {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(124, 58, 237, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
